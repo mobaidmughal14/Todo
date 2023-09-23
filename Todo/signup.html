@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo| Sign Up</title>
+
+
+  <!-- linked css with bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <!-- link javascript with bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- linking seet alters -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+  <!-- linking with stylesheet -->
+  <link rel="stylesheet" href="./signup.css">
+
+
+
+</head>
+
+<body class="signup_Background">
+
+  <!-- createing nav bar -->
+  <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./signup.html">
+        <img src="../assets/logo 1.png" alt="Logo" width="30" height="30"
+          class="d-inline-block align-text-top">
+        TODO | Sign Up
+      </a>
+      <form class="d-flex">
+        <a class="btn btn-primary m-1" href="../index.html" role="button">Sign In</a>
+        <a class="btn btn-primary m-1" href="./signup.html" role="button">Sign Up</a>
+      </form>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- main Container -->
+  <div class="container" style="width: 60%">
+
+    <!-- heading for signup form -->
+    <h1 class="pt-5 text-center">Sign Up Form</h1>
+
+    <!-- signup data form -->
+    <form class="container my-5">
+
+      <!-- taking first name and last name from user -->
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="exampleInputFirstName" class="form-label">First Name</label>
+          <input type="text" placeholder="First" class="form-control" id="firstName" aria-describedby="firstNameHelp">
+        </div>
+        <div class="mb-3 col">
+          <label for="exampleInputLastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" placeholder="Last" id="lastName" aria-describedby="lastNameHelp">
+        </div>
+      </div>
+
+      <!-- Username from user -->
+
+      <!-- ------------------------------------------- -->
+      <div class="mb-3 ">
+        <label for="exampleInputUsername" aria-placeholder="@abc123" class="form-label">Username</label>
+        <input type="text" class="form-control" placeholder="Abc@123" id="username" aria-label="Username"
+          aria-describedby="addon-wrapping">
+      </div>
+      <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none;"
+        id="usernameAlert">
+        Please Correct The Username (Must Include A Special Character And A Number)
+      </div> -->
+      <!-- ------------------------------------------- -->
+
+
+
+      <!-- email form user -->
+      <!-- -------------------------------------------- -->
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" placeholder="abc@anymail.com" class="form-control" id="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none;" id="emailAlert">
+        Please Correct The Email (Must Include @anymail.com)
+      </div> -->
+      <!-- ----------------------------------------------------- -->
+
+      <!-- password 1 from user -->
+      <!-- ------------------------------------------------------ -->
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" placeholder="*********" class="form-control" id="password1">
+      </div>
+      <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none;"
+        id="password1Alert">
+        Please Correct The Password (Length Must Be Greater Then 6 And Should Include Capital Letter, Number, Special
+        Character)
+      </div> -->
+      <!-- ------------------------------------------------------ -->
+
+      <!-- password 2 from user for confirmation -->
+      <!-- -------------------------------------------------------- -->
+      <div class="mb-3">
+        <label for="exampleInputPassword2" class="form-label"> Confirm Password</label>
+        <input type="password" placeholder="*********" class="form-control" id="password2">
+      </div>
+      <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none;"
+        id="password2Alert">
+        Password Doesn't Matches
+      </div> -->
+      <!-- ------------------------------------------------------- -->
+
+
+      <!-- under taking from user to terms and conditions  -->
+      <!-- ------------------------------------------------------- -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Agree to <a
+            href="#!"><strong>Terms
+              & Conditions</strong></a></label>
+      </div>
+      <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none;"
+        id="exampleCheck1Alert">
+        You Must Agree To Our Terms & Conditions First
+      </div> -->
+      <!-- ------------------------------------------------------------ -->
+
+      <!-- taking back to signin form  -->
+      <!-- -------------------------------------------- -->
+      <div class="mb-3 ">
+        Already have an account? Click here to <a href="../index.html"><strong>Sign In</strong></a>
+      </div>
+      <!-- ---------------------------------------------- -->
+
+
+      <!-- sign up button in a tag to stop refreshing page -->
+      <!-- ---------------------------------------------------------------------- -->
+      <a onclick="signUp() " type="button" class="btn btn-primary">Sign Up</a>
+      <!-- ------------------------------------------------------------ -->
+
+
+    </form>
+    <!-- form end -->
+    <!-- -------------------------------------------------------- -->
+
+  </div>
+  <!-- sign in data ends here -->
+  <!-- ------------------------------------------------ -->
+
+
+  <!-- Linking local signup Javascript -->
+  <script src="./signup.js"></script>
+</body>
+
+</html>

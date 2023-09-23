@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Todo</title>
+
+    <!-- linked css with bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+    <!-- link javascript with bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- linking seet alters -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!-- linking with stylesheet  -->
+    <link rel="stylesheet" href="./todo.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed ">
+
+    <!-- createing nav bar -->
+    <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+        <span> <a type="button" class="btn btn-secondary mx-2" href="../index.html">
+                &larr; Back to Login Page
+            </a></span><span>
+            <div class="container-fluid">
+                <form class="d-flex">
+                    <a class="navbar-brand" href="./todo.html">
+                        Todo Management Pannel
+                    </a>
+                </form>
+            </div>
+        </span>
+    </nav>
+    <!-- navbar end -->
+    <main>
+        <!-- add remove todo  buttons-->
+        <center class="todoResponseiveParent">
+        <div id="todo_Buttons" class="btn-group m-5 todo_Action_Buttons todoResponseive" role="group" aria-label="Basic example">
+            <button type="button" onclick="addTodo()" class="btn btn-primary">Add To Todo</button>
+          </div>
+          <div class="btn-group m-5 todo_Action_Buttons todoResponseive" role="group" aria-label="Basic example">
+            <button type="button" onclick="clearAllTodo()" class="btn btn-danger ">Clear All Todo</button>
+          </div>
+        </center>
+
+    <!-- --------------------------------------- -->
+    <!-- UI when There Is No TODo -->
+
+    <div id="noRecord" class="container my-5 ">
+        <p class="text-center position-absolute top-50 start-50 translate-middle" >No Record To Display</p>
+    </div>
+
+        <!-- ------------------------------------------ --> 
+<!-- add to todo -->
+        <div id="elementsAdding" style="display:none;">
+        <form action="" class="container my-5" style="width: 60%;" >
+          <div class="mb-3 ">
+              <label for="todoTitleInput1" class="form-label">Title</label>
+              <input type="text" class="form-control" id="todoTitleInput1" placeholder="Watch Movie">
+            </div>
+            <div class="mb-3">
+              <label for="todoDescriptionInput1" class="form-label">Description (Optional)</label>
+              <textarea class="form-control" id="todoDescriptionInput1" rows="3" placeholder="Movie will be 'Lost In Space'" ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="deadline" class="form-label">Deadline</label>
+        <input type="datetime-local" class="form-control" id="todoDeadline" name="deadline">
+            </div>
+            <div class="mb-3">
+            <label for="todoPriorityInput1" class="form-label">Select Priority Level</label>
+            <select id="todoPriorityInput1" class="form-select" aria-label="Small select example">
+              <option selected value="Low">Low</option>
+              <option value="Mid">Mid</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+          <center>
+          <div class="btn-group mb-3 " role="group" aria-label="Basic example">
+              <button type="button" onclick="todoAdded()" class="btn btn-primary">Click To Add In Todo</button>
+            </div>
+            <div class="btn-group mb-3 " role="group" aria-label="Basic example">
+              <button type="button" onclick="todoDontAdd()" class="btn btn-warning">Want To Cancel?</button>
+            </div> 
+           </center>
+          </form>
+        </div><br>
+          <!-- ------------------------------------------------------------ -->
+         
+          <ul id="todoTaskListing">
+          </ul>
+
+
+<br><br>
+    </main>
+    <footer class="py-4 bg-light mt-auto fixed-bottom ">
+        <div class="container-fluid px-4  ">
+            <div class="d-flex align-items-center justify-content-between small">
+                <div class="text-muted">Copyright &copy; TODO Management 2023</div>
+                <div>
+                    <a href="#!">Privacy Policy</a>
+                    &middot;
+                    <a href="#!">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    </div>
+
+    <!-- linking with local js file -->
+    <script src="./todo.js" ></script>
+    <!-- ------------------------------ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+</body>
+
+</html>
